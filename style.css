@@ -3064,3 +3064,208 @@ button {
     }
 
 }
+/* ============================================================
+   NOSOTROS - MISIÓN Y VISIÓN
+============================================================ */
+
+.about-section {
+    padding: 100px 0;
+    background: var(--blanco);
+}
+
+
+/* CONTENEDOR DE LOS DOS CUADROS */
+
+.mission-vision-grid {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+
+/* CUADROS */
+
+.mission-vision-card {
+    position: relative;
+
+    min-height: 330px;
+
+    padding: 42px 38px;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #fff8ea
+        );
+
+    border:
+        1px solid
+        rgba(18, 59, 109, 0.08);
+
+    box-shadow:
+        var(--sombra);
+
+    text-align: center;
+
+    overflow: hidden;
+
+    transition:
+        var(--transicion);
+}
+
+
+/* DECORACIÓN SUPERIOR */
+
+.mission-vision-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 7px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--rojo),
+            var(--amarillo),
+            var(--verde),
+            var(--celeste)
+        );
+}
+
+
+/* DECORACIÓN DE FONDO */
+
+.mission-vision-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    right: -80px;
+    bottom: -80px;
+
+    border-radius: 50%;
+
+    border:
+        18px dotted
+        rgba(18, 59, 109, 0.05);
+
+    pointer-events: none;
+}
+
+
+/* EFECTO AL PASAR EL MOUSE */
+
+.mission-vision-card:hover {
+    transform:
+        translateY(-9px);
+
+    box-shadow:
+        var(--sombra-fuerte);
+}
+
+
+/* ICONO */
+
+.mission-vision-icon {
+    width: 75px;
+    height: 75px;
+
+    margin:
+        0 auto 22px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 22px;
+
+    background:
+        var(--amarillo);
+
+    color:
+        var(--azul);
+
+    font-size:
+        2rem;
+
+    box-shadow:
+        0 10px 25px
+        rgba(244, 197, 66, 0.25);
+}
+
+
+/* TÍTULO */
+
+.mission-vision-card h3 {
+    margin-bottom: 15px;
+
+    color:
+        var(--azul);
+
+    font-family:
+        "Baloo 2", cursive;
+
+    font-size:
+        2rem;
+
+    line-height:
+        1.1;
+}
+
+
+/* TEXTO */
+
+.mission-vision-card p {
+    position: relative;
+
+    z-index: 2;
+
+    color:
+        var(--gris);
+
+    font-size:
+        0.95rem;
+
+    line-height:
+        1.8;
+}
+
+
+/* ============================================================
+   RESPONSIVE MISIÓN Y VISIÓN
+============================================================ */
+
+@media (max-width: 700px) {
+
+    .mission-vision-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .mission-vision-card {
+        min-height: auto;
+
+        padding:
+            36px 28px;
+    }
+
+}
